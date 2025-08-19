@@ -1,0 +1,21 @@
+ekf_filter_node:
+    ros__parameters:
+        frequency: 30.0              # How frequently we publish (even if filter has not updated)
+        sensor_timeout: 0.1          # If no sensor data in this time, we do a prediction (without correction)
+        two_d_mode: false            # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
+        transform_timeout: 0.0       # How long to wait for required transforms to be available
+        print_diagnostics: true      # Whether to publish diagnostics
+        publish_tf: true             # Whether to publish the output of the filter to /tf
+
+        map_frame: map               # The name of your REP-105 map frame (not needed if world_frame == odom_frame)
+        odom_frame: ?                # The name of your REP-105 odom frame
+        base_link_frame: ?           # The name of your REP-105 base_link frame. Will be the child_frame_id in the output.
+        world_frame: ?               # The world frame that will be the frame_id in the output.
+
+        odom0: ?                      # Topic type + number (odomN, poseN, twistN, imuN) and name
+        odom0_config: [?, ?, ?,       # x, y, z
+                       ?, ?, ?,       # roll, pitch, yaw
+                       ?, ?, ?,       # x velocity, y velocity, z velocity
+                       ?, ?, ?,       # roll velocity, pitch velocity, yaw velocity
+                       ?, ?, ?]       # x acceleration, y acceleration, z acceleration
+
