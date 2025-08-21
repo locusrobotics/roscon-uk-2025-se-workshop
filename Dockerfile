@@ -1,15 +1,15 @@
 FROM ros:kilted
 
-RUN apt-get update && apt-get install -y wget xz-utils git vim build-essential \
+RUN apt-get update && apt-get install -y wget xz-utils git git-lfs vim build-essential \
     ros-kilted-robot-localization ros-kilted-rviz2
 RUN git lfs install
 RUN rm -rf /var/lib/apt/lists/*
 
-COPY task1 /root/ws/src/task1
-
-WORKDIR /root/bags/planar
-RUN wget https://rosconuk2025.s3.us-east-1.amazonaws.com/planar/planar.db3
-RUN wget https://rosconuk2025.s3.us-east-1.amazonaws.com/planar/metadata.yaml
+WORKDIR /root/ws/src
+RUN git clone https://github.com/ayrton04/roscon-uk-2025-se-workshop.git
+WORKDIR /root/ws/src/roscon-uk-2025-se-workshop/bags
+RUN ./decompress.sh
+RUN rm *.xz decompress.sh
 
 WORKDIR /root/ws
 RUN  /bin/bash -c "source /opt/ros/kilted/setup.bash && cd /root/ws && colcon build --symlink-install"
