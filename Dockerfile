@@ -2,6 +2,7 @@ FROM ros:kilted
 
 RUN apt-get update && apt-get install -y wget xz-utils git vim build-essential \
     ros-kilted-robot-localization ros-kilted-rviz2
+RUN git lfs install
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY task1 /root/ws/src/task1
