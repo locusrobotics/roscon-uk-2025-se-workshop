@@ -1,0 +1,20 @@
+services:
+  rosconuk2025:
+    image: automatom81/roscon_uk_2025_se_workshop
+    network_mode: host
+    init: true
+    environment:
+      # Wall off ROS. When this is FALSE, ROS_DOMAIN_ID is important to set
+      - ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+      # Settings to make graphical programs work
+      - DISPLAY
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      # Settings to make graphical programs work
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
+      - /dev/dri:/dev/dri
+    # this adds docker -it
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+ 
