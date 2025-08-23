@@ -4,7 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded: ~
-      Splitter Ratio: 0.5922480821609497
+      Splitter Ratio: 0.7968991994857788
     Tree Height: 1388
   - Class: rviz_common/Selection
     Name: Selection
@@ -98,7 +98,7 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: Raw Wheel Odometry
+      Name: "White: Raw Wheel Odometry"
       Position Tolerance: 1
       Shape:
         Alpha: 1
@@ -137,7 +137,7 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: EKF Output
+      Name: "Green: EKF Output"
       Position Tolerance: 1
       Shape:
         Alpha: 1
