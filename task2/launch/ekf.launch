@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <arg name="modified_pnc" default="False"/>
+  <arg name="differential" default="False"/>
+
+  <let name="odometry_only" value="$(eval 'not $(var modified_pnc) and not $(var differential)')"/>
+  <let name="pnc" value="$(eval '$(var modified_pnc) and not $(var differential)')"/>
+  <let name="diff" value="$(var differential)"/>
+
+  <!-- TM: need to set publish_tf in each config file -->
+
+  <!-- Always run the wheel encoder-only instance -->
+  <node pkg="robot_localization" exec="ekf_node" name="ekf_node_odometry" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task2)/config/odometry.yaml"/>
+    <param name="publish_tf" value="$(var odometry_only)"/>
+  </node>
+
+  <!-- If requested and differential is false, run the modified process noise covariance instance -->
+  <group if="$(var pnc)">
+    <node pkg="robot_localization" exec="ekf_node" name="ekf_node_odometry_modified_pnc" namespace="r2d2">
+      <param name="use_sim_time" value="true"/>
+      <param from="$(find-pkg-share task2)/config/odometry_modified_pnc.yaml"/>
+      <remap from="odometry/filtered" to="odometry/filtered_modified_pnc"/>
+    </node>
+  </group>
+
+  <!-- If differential is requested, run both the non-differential version and the differential version -->
+  <group if="$(var diff)">
+    <node pkg="robot_localization" exec="ekf_node" name="ekf_node_odometry_vo" namespace="r2d2">
+      <param name="use_sim_time" value="true"/>
+      <param from="$(find-pkg-share task2)/config/odometry_vo.yaml"/>
+      <remap from="odometry/filtered" to="odometry/filtered_vo"/>
+    </node>
+
+    <node pkg="robot_localization" exec="ekf_node" name="ekf_node_odometry_vo_diff" namespace="r2d2">
+      <param name="use_sim_time" value="true"/>
+      <param from="$(find-pkg-share task2)/config/odometry_vo_diff.yaml"/>
+      <remap from="odometry/filtered" to="odometry/filtered_vo_diff"/>
+    </node>
+
+    <node pkg="tf2_ros" exec="static_transform_publisher" name="static_transform_publisher"
+      args="--frame-id map --child-frame-id r2d2/odom --qx 1.0"/>
+  </group>
+
+  <let name="rviz_config" value="odometry.rviz" if="$(var odometry_only)"/>
+  <let name="rviz_config" value="odometry_modified_pnc.rviz" if="$(var pnc)"/>
+  <let name="rviz_config" value="odometry_vo_diff.rviz" if="$(var diff)"/>
+
+  <node pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share task2)/config/$(var rviz_config)" name="rviz">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+</launch>
