@@ -3,7 +3,7 @@ r2d2:
         ros__parameters:
             frequency: 30.0              # How frequently we publish (even if filter has not updated)
             sensor_timeout: 0.1          # If no sensor data in this time, we do a prediction (without correction)
-            two_d_mode: false            # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
+            two_d_mode: true             # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
             transform_timeout: 0.0       # How long to wait for required transforms to be available
             print_diagnostics: true      # Whether to publish diagnostics
 
