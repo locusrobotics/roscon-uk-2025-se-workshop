@@ -42,7 +42,7 @@
     </node>
 
     <node pkg="tf2_ros" exec="static_transform_publisher" name="static_transform_publisher"
-      args="--frame-id map --child-frame-id r2d2/odom --qx 1.0"/>
+      args="--frame-id map --child-frame-id r2d2/odom --qw 1.0"/>
   </group>
 
   <let name="rviz_config" value="odometry.rviz" if="$(var odometry_only)"/>
