@@ -1,8 +1,8 @@
 r2d2:
-    ekf_node_tier1:
+    ekf_node:
         ros__parameters:
             frequency: 50.0              # How frequently we publish (even if filter has not updated)
-            two_d_mode: true             # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
+            two_d_mode: false            # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
             transform_timeout: 0.0       # How long to wait for required transforms to be available
             print_diagnostics: true      # Whether to publish diagnostics
             publish_tf: true
@@ -12,59 +12,23 @@ r2d2:
             predict_to_current_time: true
             dynamic_process_noise_covariance: true
 
-            initial_estimate_covariance: [0.01, 0.01, 1e-9, 1e-9, 1e-9, 0.01, 10.0, 10.0, 1e-9, 1e-9, 1e-9, 10.0, 1e-9, 1e-9, 1e-9]
-            process_noise_covariance: [0.01, 0.01, 1e-9, 1e-9, 1e-9, 0.01, 0.1, 0.1, 1e-9, 1e-9, 1e-9, 0.1, 1e-9, 1e-9, 0.1]
+            initial_estimate_covariance: [0.01, 0.01, 10.0, 1e-9, 1e-9, 0.01, 10.0, 10.0, 1e-9, 1e-9, 1e-9, 10.0, 1e-9, 1e-9, 1e-9]
+            process_noise_covariance: [0.01, 0.01, 1e-9, 1e-9, 1e-9, 0.01, 0.05, 0.05, 1e-9, 1e-9, 1e-9, 0.1, 1e-9, 1e-9, 0.05]
 
             map_frame: map                    # The name of your REP-105 map frame (not needed if world_frame == odom_frame)
             odom_frame: r2d2/odom             # The name of your REP-105 odom frame
             base_link_frame: r2d2/base_link   # The name of your REP-105 base_link frame. Will be the child_frame_id in the output.
             world_frame: r2d2/odom            # The world frame that will be the frame_id in the output.
 
-            odom0: odometry                       # Topic type + number (odomN, poseN, twistN, imuN) and name
-            odom0_config: [false, false, false,   # x, y, z
-                           false, false, false,   # roll, pitch, yaw
-                           true,  true,  false,   # x velocity, y velocity, z velocity
-                           false, false, true,    # roll velocity, pitch velocity, yaw velocity
-                           false, false, false]   # x acceleration, y acceleration, z acceleration
+            twist0: velocity                      # Topic type + number (odomN, poseN, twistN, imuN) and name
+            twist0_config: [false, false, false,  # x, y, z
+                            false, false, false,  # roll, pitch, yaw
+                            true,  true,  true,   # x velocity, y velocity, z velocity
+                            false, false, false,   # roll velocity, pitch velocity, yaw velocity
+                            false, false, false]   # x acceleration, y acceleration, z acceleration
 
-            imu0: imux
-            imu0_config: [false, false, false,
-                          false, false, false,
-                          false, false, false,
-                          false, false, true,
-                          true,  false, false]
-
-    # TM: remove, and make task to add it
-    ekf_node_tier2:
-        ros__parameters:
-            frequency: 30.0
-            sensor_timeout: 0.04
-            two_d_mode: true
-            print_diagnostics: true
-            publish_tf: true
-
-            map_frame: map
-            odom_frame: r2d2/odom
-            base_link_frame: r2d2/base_link
-            world_frame: map
-
-            smooth_lagged_data: true
-            history_length: 0.4
-            predict_to_current_time: false
-            dynamic_process_noise_covariance: true
-
-            initial_estimate_covariance: [0.1, 0.1, 1e-9, 1e-9, 1e-9, 0.1, 10.0, 10.0, 1e-9, 1e-9, 1e-9, 10.0, 1e-9, 1e-9, 1e-9]
-            process_noise_covariance: [0.02, 0.02, 1e-9, 1e-9, 1e-9, 0.01, 0.2, 0.005, 1e-9, 1e-9, 1e-9, 0.15, 1e-9, 1e-9, 0.1]
-
-            odom0: odometry
-            odom0_config: [false, false, false,
-                           false, false, false,
-                           true,  true,  false,
-                           false, false, true,
-                           false, false, false]
-
-            odom1: odometry/gps
-            odom1_config: [true,  true,  false,
+            pose0: depth
+            pose0_config: [false, false, true,
                            false, false, false,
                            false, false, false,
                            false, false, false,
@@ -72,21 +36,8 @@ r2d2:
 
             imu0: imu
             imu0_config: [false, false, false,
-                          false, false, true,  # Need to note how IMUs can report correct yaw, even when mounted strangely
+                          true,  true,  true,
                           false, false, false,
-                          false, false, true,
-                          true,  false, false]
+                          true,  true,  true,
+                          false, false, false]
 
-    navsat_transform_node:
-        ros__parameters:
-            frequency: 30.0
-            delay: 8.0
-
-            magnetic_declination_radians: 0.181688775
-            yaw_offset: 0.0
-
-            zero_altitude: true
-            broadcast_utm_transform: true
-            publish_filtered_gps: true
-            use_odometry_yaw: false
-            wait_for_datum: false

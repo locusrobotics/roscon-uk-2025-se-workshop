@@ -3,14 +3,8 @@ Panels:
     Help Height: 138
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - "/Blue: EKF Output (Tier 1)1/Shape1"
-        - "/Magenta: EKF Output (Tier 2)1/Covariance1/Position1"
-        - "/Magenta: EKF Output (Tier 2)1/Covariance1/Orientation1"
-        - /GPS Poses1/Shape1
-        - /GPS Poses1/Covariance1/Position1
-        - /GPS Poses1/Covariance1/Orientation1
-      Splitter Ratio: 0.8294117450714111
+      Expanded: ~
+      Splitter Ratio: 0.6464208364486694
     Tree Height: 908
   - Class: rviz_common/Selection
     Name: Selection
@@ -29,15 +23,15 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: Sonar 1
 Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
-      Cell Size: 1
+      Cell Size: 0.5
       Class: rviz_default_plugins/Grid
-      Color: 160; 160; 164
-      Enabled: false
+      Color: 153; 193; 241
+      Enabled: true
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -50,45 +44,6 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 500
       Reference Frame: <Fixed Frame>
-      Value: false
-    - Angle Tolerance: 0.7799999713897705
-      Class: rviz_default_plugins/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 255; 255; 127
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 204; 51; 204
-          Scale: 1
-          Value: true
-        Value: false
-      Enabled: true
-      Keep: 600
-      Name: "White: Raw Wheel Odometry"
-      Position Tolerance: 1
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 255; 255; 255
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
-        Shaft Length: 0.5
-        Shaft Radius: 0.05000000074505806
-        Value: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /r2d2/odometry
       Value: true
     - Angle Tolerance: 0.7799999713897705
       Class: rviz_default_plugins/Odometry
@@ -107,15 +62,15 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: false
-      Enabled: false
+      Enabled: true
       Keep: 600
-      Name: "Blue: EKF Output (Tier 1)"
+      Name: "Red: EKF Output (History)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 224; 27; 36
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -127,85 +82,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /r2d2/odometry/filtered_tier1
-      Value: false
-    - Angle Tolerance: 0.7799999713897705
-      Class: rviz_default_plugins/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 97; 53; 131
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 220; 138; 221
-          Scale: 1
-          Value: true
-        Value: true
-      Enabled: true
-      Keep: 600
-      Name: "Magenta: EKF Output (Tier 2)"
-      Position Tolerance: 1
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 145; 65; 172
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
-        Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
-        Value: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /r2d2/odometry/filtered_tier2
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
-      Class: rviz_default_plugins/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 38; 162; 105
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 143; 240; 164
-          Scale: 1
-          Value: true
-        Value: true
-      Enabled: true
-      Keep: 1
-      Name: GPS Poses
-      Position Tolerance: 0.10000000149011612
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 0; 255; 0
-        Head Length: 0
-        Head Radius: 0
-        Shaft Length: 0.25
-        Shaft Radius: 0.25
-        Value: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /r2d2/odometry/gps
+        Value: /r2d2/odometry/filtered
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -216,7 +93,7 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz_default_plugins/LaserScan
-      Color: 224; 27; 36
+      Color: 249; 240; 107
       Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
@@ -225,7 +102,7 @@ Visualization Manager:
       Max Intensity: 570
       Min Color: 0; 0; 0
       Min Intensity: 6
-      Name: LaserScan
+      Name: Sonar 1
       Position Transformer: XYZ
       Selectable: true
       Size (Pixels): 3
@@ -237,14 +114,48 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /r2d2/scan
+        Value: /r2d2/sonar1
+      Use Fixed Frame: true
+      Use rainbow: false
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/LaserScan
+      Color: 249; 240; 107
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 570
+      Min Color: 0; 0; 0
+      Min Intensity: 6
+      Name: Sonar 2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Spheres
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /r2d2/sonar2
       Use Fixed Frame: true
       Use rainbow: false
       Value: true
   Enabled: true
   Global Options:
-    Background Color: 0; 0; 0
-    Fixed Frame: map
+    Background Color: 26; 95; 180
+    Fixed Frame: r2d2/odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -286,21 +197,26 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: 0
-      Class: rviz_default_plugins/TopDownOrtho
+      Class: rviz_default_plugins/Orbit
+      Distance: 19.189144134521484
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 109.61239624023438
+      Pitch: 0.12979832291603088
       Target Frame: r2d2/base_link
-      Value: TopDownOrtho (rviz_default_plugins)
-      X: 0
-      Y: 0
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 4.907398223876953
     Saved: ~
 Window Geometry:
   Displays:
@@ -308,7 +224,7 @@ Window Geometry:
   Height: 1300
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000015600000456fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f00000456000000cc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000015f00000456fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003f00000456000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000d800000005afc0100000002fb0000000800540069006d0065010000000000000d800000026f00fffffffb0000000800540069006d0065010000000000000450000000000000000000000abf0000045600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001cf00000456fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003f00000456000000cc00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000015f00000456fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003f00000456000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006aa0000005afc0100000002fb0000000800540069006d00650100000000000006aa0000026f00fffffffb0000000800540069006d00650100000000000004500000000000000000000003700000045600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -317,6 +233,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 3456
-  X: 0
+  Width: 1706
+  X: 1706
   Y: 32
