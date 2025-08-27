@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <node pkg="robot_localization" exec="ekf_node" name="ekf_node_tier1" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task4)/config/two_tier_gps.yaml"/>
+    <remap from="odometry/filtered" to="odometry/filtered_tier1"/>
+  </node>
+
+  <node pkg="robot_localization" exec="ekf_node" name="ekf_node_tier2" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task4)/config/two_tier_gps.yaml"/>
+    <remap from="odometry/filtered" to="odometry/filtered_tier2"/>
+  </node>
+
+  <node pkg="robot_localization" exec="navsat_transform_node" name="navsat_transform_node" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task4)/config/two_tier_gps.yaml"/>
+    <remap from="odometry/filtered" to="odometry/filtered_tier2"/>
+    <remap from="gps/fix" to="gps"/>
+  </node>
+
+  <node pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share task4)/config/two_tier_gps.rviz" name="rviz">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+</launch>
