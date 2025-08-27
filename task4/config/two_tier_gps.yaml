@@ -54,7 +54,7 @@ r2d2:
             dynamic_process_noise_covariance: true
 
             initial_estimate_covariance: [0.1, 0.1, 1e-9, 1e-9, 1e-9, 0.1, 10.0, 10.0, 1e-9, 1e-9, 1e-9, 10.0, 1e-9, 1e-9, 1e-9]
-            process_noise_covariance: [0.005, 0.005, 1e-9, 1e-9, 1e-9, 0.01, 0.1, 0.02, 1e-9, 1e-9, 1e-9, 0.1, 1e-9, 1e-9, 0.1]
+            process_noise_covariance: [0.02, 0.02, 1e-9, 1e-9, 1e-9, 0.01, 0.2, 0.005, 1e-9, 1e-9, 1e-9, 0.15, 1e-9, 1e-9, 0.1]
 
             odom0: odometry
             odom0_config: [false, false, false,
