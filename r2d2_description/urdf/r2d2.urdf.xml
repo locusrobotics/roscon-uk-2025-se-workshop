@@ -1,0 +1,350 @@
+<robot name="r2d2">
+  <material name="white">
+     <color rgba="1.0 1.0 1.0 1.0" />
+  </material>
+
+  <material name="black">
+     <color rgba="0.0 0.0 0.0 1.0" />
+  </material>
+
+  <material name="silver">
+     <color rgba="0.6 0.6 0.6 1.0" />
+  </material>
+
+  <material name="blue">
+     <color rgba="0.0 0.0 1.0 1.0" />
+  </material>
+
+  <link name="r2d2/base_link"/>
+
+  <link name="r2d2/body">
+    <visual>
+      <origin xyz="0 0 0.4075"  rpy="0 -0.43 0"/>
+      <geometry>
+        <cylinder radius=".21" length="0.42"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/body_bottom">
+    <visual>
+      <origin xyz="0 0 0.4075"  rpy="0 -0.43 0"/>
+      <geometry>
+        <cylinder radius=".17" length="0.52"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/head">
+    <visual>
+      <origin xyz="-0.087 0 0.5975" rpy="0 -0.43 0" />
+      <geometry>
+        <sphere radius=".209" />
+      </geometry>
+      <material name="silver"/>
+    </visual>
+  </link>
+  
+  <link name="r2d2/leg_upper_left">
+    <visual>
+      <origin xyz="-0.064 0.21 0.4375" rpy="0 0.25 0" />
+      <geometry>
+        <box size="0.15 0.04 0.15" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/leg_lower_left">
+    <visual>
+      <origin xyz="-0.108 0.21 0.2675" rpy="0 0.25 0" />
+      <geometry>
+        <box size="0.10 0.035 0.25" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/leg_upper_right">
+    <visual>
+      <origin xyz="-0.064 -0.21 0.4375" rpy="0 0.25 0" />
+      <geometry>
+        <box size="0.15 0.04 0.15" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/leg_lower_right">
+    <visual>
+      <origin xyz="-0.108 -0.21 0.2675" rpy="0 0.25 0" />
+      <geometry>
+        <box size="0.10 0.035 0.25" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/leg_centre">
+    <visual>
+      <origin xyz="0.15 0 0.1375" rpy="0 -0.43 0" />
+      <geometry>
+        <box size="0.05 0.035 0.1" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_left_a">
+    <visual>
+      <origin xyz="-0.115 -0.21 0.0875" rpy="0 -0.3 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_left_b">
+    <visual>
+      <origin xyz="-0.17 -0.21 0.0875" rpy="0 0.4 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_left_c">
+    <visual>
+      <origin xyz="-0.148 -0.21 0.0295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.08 0.06" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_right_a">
+    <visual>
+      <origin xyz="-0.115 0.21 0.0875" rpy="0 -0.3 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_right_b">
+    <visual>
+      <origin xyz="-0.17 0.21 0.0875" rpy="0 0.4 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_right_c">
+    <visual>
+      <origin xyz="-0.148 0.21 0.0295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.08 0.06" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_centre_a">
+    <visual>
+      <origin xyz="0.165 0.0 0.0875" rpy="0 -0.3 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_centre_b">
+    <visual>
+      <origin xyz="0.11 0.0 0.0875" rpy="0 0.4 0" />
+      <geometry>
+        <box size="0.08 0.08 0.16" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/foot_centre_c">
+    <visual>
+      <origin xyz="0.132 0.0 0.0295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.08 0.06" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/faceplate_centre">
+    <visual>
+      <origin xyz="0.0 0.0 0.7775" rpy="-1.07 0.0 1.57" />
+      <geometry>
+        <box size="0.1 0.02 0.1" />
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/face_ring">
+    <visual>
+      <origin xyz="-0.103 0 0.6375" rpy="0 -0.43 0" />
+      <geometry>
+        <cylinder radius=".21" length="0.05" />
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/faceplate_camera">
+    <visual>
+      <origin xyz="0.0 0.0 0.7775" rpy="-2.64 0.0 1.57" />
+      <geometry>
+        <cylinder radius="0.03" length="0.05" />
+      </geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/arm1">
+    <visual>
+      <origin xyz="0.0 0 0.5875"  rpy="0 -0.43 0"/>
+      <geometry>
+        <cylinder radius=".15" length="0.03"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <link name="r2d2/arm2">
+    <visual>
+      <origin xyz="0.0245 0 0.5375"  rpy="0 -0.43 0"/>
+      <geometry>
+        <cylinder radius=".15" length="0.03"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_body" type="fixed">
+    <parent link="r2d2/base_link"/>
+    <child link="r2d2/body"/>
+  </joint>
+
+  <joint name="body_to_head" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/head"/>
+  </joint>
+
+  <joint name="body_to_body_bottom" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/body_bottom"/>
+  </joint>
+ 
+  <joint name="body_to_leg_upper_left" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/leg_upper_left"/>
+  </joint>
+
+  <joint name="body_to_leg_upper_right" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/leg_upper_right"/>
+  </joint>
+
+  <joint name="body_to_leg_centre" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/leg_centre"/>
+  </joint>
+
+  <joint name="leg_upper_left_to_leg_lower_left" type="fixed">
+    <parent link="r2d2/leg_upper_left"/>
+    <child link="r2d2/leg_lower_left"/>
+  </joint>
+
+  <joint name="leg_upper_right_to_leg_lower_right" type="fixed">
+    <parent link="r2d2/leg_upper_right"/>
+    <child link="r2d2/leg_lower_right"/>
+  </joint>
+
+  <joint name="leg_lower_left_to_foot_left_a" type="fixed">
+    <parent link="r2d2/leg_lower_left"/>
+    <child link="r2d2/foot_left_a"/>
+  </joint>
+
+  <joint name="leg_lower_left_to_foot_left_b" type="fixed">
+    <parent link="r2d2/leg_lower_left"/>
+    <child link="r2d2/foot_left_b"/>
+  </joint>
+
+  <joint name="leg_lower_left_to_foot_left_c" type="fixed">
+    <parent link="r2d2/leg_lower_left"/>
+    <child link="r2d2/foot_left_c"/>
+  </joint>
+
+  <joint name="leg_lower_right_to_foot_right_a" type="fixed">
+    <parent link="r2d2/leg_lower_right"/>
+    <child link="r2d2/foot_right_a"/>
+  </joint>
+
+  <joint name="leg_lower_right_to_foot_right_b" type="fixed">
+    <parent link="r2d2/leg_lower_right"/>
+    <child link="r2d2/foot_right_b"/>
+  </joint>
+
+  <joint name="leg_lower_right_to_foot_right_c" type="fixed">
+    <parent link="r2d2/leg_lower_right"/>
+    <child link="r2d2/foot_right_c"/>
+  </joint>
+
+  <joint name="leg_centre_to_foot_centre_a" type="fixed">
+    <parent link="r2d2/leg_centre"/>
+    <child link="r2d2/foot_centre_a"/>
+  </joint>
+
+  <joint name="leg_centre_to_foot_centre_b" type="fixed">
+    <parent link="r2d2/leg_centre"/>
+    <child link="r2d2/foot_centre_b"/>
+  </joint>
+
+  <joint name="leg_centre_to_foot_centre_c" type="fixed">
+    <parent link="r2d2/leg_centre"/>
+    <child link="r2d2/foot_centre_c"/>
+  </joint>
+
+  <joint name="head_to_faceplate_centre" type="fixed">
+    <parent link="r2d2/head"/>
+    <child link="r2d2/faceplate_centre"/>
+  </joint>
+
+  <joint name="head_to_face_ring" type="fixed">
+    <parent link="r2d2/head"/>
+    <child link="r2d2/face_ring"/>
+  </joint>
+
+  <joint name="faceplate_centre_to_faceplate_camera" type="fixed">
+    <parent link="r2d2/faceplate_centre"/>
+    <child link="r2d2/faceplate_camera"/>
+  </joint>
+
+  <joint name="body_to_arm1" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/arm1"/>
+  </joint>
+
+  <joint name="body_to_arm2" type="fixed">
+    <parent link="r2d2/body"/>
+    <child link="r2d2/arm2"/>
+  </joint>
+
+</robot>
