@@ -9,7 +9,7 @@
   <let name="pnc" value="$(eval '$(var modified_pnc) and not $(var differential)')"/>
   <let name="diff" value="$(var differential)"/>
 
-  <!-- TM: need to set publish_tf in each config file -->
+  <include file="$(find-pkg-share r2d2_description)/launch/description.launch.py"/>
 
   <!-- Always run the wheel encoder-only instance -->
   <node pkg="robot_localization" exec="ekf_node" name="ekf_node_odometry" namespace="r2d2">

@@ -2,6 +2,8 @@
 
 <launch>
 
+  <include file="$(find-pkg-share r2d2_description)/launch/description.launch.py"/>
+
   <node pkg="robot_localization" exec="ekf_node" name="ekf_node" namespace="r2d2">
     <param name="use_sim_time" value="true"/>
     <param from="$(find-pkg-share task5)/config/subsea_3d.yaml"/>

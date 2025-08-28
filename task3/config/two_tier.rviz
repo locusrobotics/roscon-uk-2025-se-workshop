@@ -49,6 +49,146 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Value: false
     - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /r2d2/robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        r2d2/arm1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/arm2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r2d2/body:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/body_bottom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/face_ring:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/faceplate_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/faceplate_centre:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_centre_a:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_centre_b:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_centre_c:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_left_a:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_left_b:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_left_c:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_right_a:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_right_b:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/foot_right_c:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/head:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/leg_centre:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/leg_lower_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/leg_lower_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/leg_upper_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r2d2/leg_upper_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: Model
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
         Max Value: 10

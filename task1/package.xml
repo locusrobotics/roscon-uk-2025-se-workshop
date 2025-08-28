@@ -3,7 +3,7 @@
 <package format="3">
   <name>task1</name>
   <version>0.0.0</version>
-  <description>The droid you're looking for</description>
+  <description>R2-D2, you know better than to trust a strange computer</description>
   <maintainer email="tmoore@locusrobotics.com">Tom Moore</maintainer>
   <license>Apache-2.0</license>
 
@@ -11,6 +11,10 @@
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
+
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>r2d2_description</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
