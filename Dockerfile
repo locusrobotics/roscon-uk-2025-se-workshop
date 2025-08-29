@@ -21,6 +21,7 @@ ENV task1=/root/ws/src/roscon-uk-2025-se-workshop/task2
 ENV task3=/root/ws/src/roscon-uk-2025-se-workshop/task3
 ENV task4=/root/ws/src/roscon-uk-2025-se-workshop/task4
 ENV task5=/root/ws/src/roscon-uk-2025-se-workshop/task5
+ENV bags=/root/ws/src/roscon-uk-2025-se-workshop/bags
 
 RUN echo "alias s='source /root/ws/install/setup.bash'" >> /root/.bashrc
 RUN echo "alias cb='colcon build --symlink-install'" >> /root/.bashrc
