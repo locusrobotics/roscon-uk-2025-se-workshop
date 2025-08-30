@@ -6,7 +6,6 @@ r2d2:
             two_d_mode: true             # If enabled, 3D dimensions (z, roll, pitch, and their derivatives) are forced to 0
             transform_timeout: 0.0       # How long to wait for required transforms to be available
             print_diagnostics: true      # Whether to publish diagnostics
-            publish_tf: true
 
             smooth_lagged_data: true
             history_length: 1.0
@@ -49,7 +48,6 @@ r2d2:
             sensor_timeout: 0.04
             two_d_mode: true
             print_diagnostics: true
-            publish_tf: true
 
             map_frame: map
             odom_frame: r2d2/odom

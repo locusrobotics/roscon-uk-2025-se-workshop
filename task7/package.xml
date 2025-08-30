@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>task6</name>
+  <name>task7</name>
   <version>0.0.0</version>
-  <description>No, I don't think he likes you at all</description>
+  <description>Now, let's see if we can't figure out what you are, my little friend, and where you come from.</description>
   <maintainer email="tmoore@locusrobotics.com">Tom Moore</maintainer>
   <license>Apache-2.0</license>
 
@@ -18,7 +18,7 @@
   <exec_depend>robot_localization</exec_depend>
   <exec_depend>rviz2</exec_depend>
   <exec_depend>r2d2_description</exec_depend>
-  <exec_depend>task1</exec_depend>
+  <exec_depend>task3</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
