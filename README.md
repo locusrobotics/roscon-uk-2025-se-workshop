@@ -26,17 +26,17 @@ docker compose run <name of container>
 
 For convenience, we have provided a number of handy shortcuts for working with the workspace in the Docker container.
 
-**Directory shortcuts**
+##### Directory shortcuts
 
 The the main workspace has its own environment variable:
 
-`$ws` - Variable for the workspace root
-`$bags` - Variable for the bag directory
+`$ws` - Variable for the workspace root  
+`$bags` - Variable for the bag directory  
 `$taskN` - Variable for the directory for task N (where N ranges from 1 to 8)
 
-**Command aliases**
+##### Command aliases
 
-`s` - Sources the workspace `ws/install/setup.bash`
+`s` - Sources the workspace `ws/install/setup.bash`  
 `cb` - Buulds the workspace by running `catkin build --symlink-install`
 
 ### Building from source
