@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <include file="$(find-pkg-share r2d2_description)/launch/description.launch.py"/>
+
+  <node pkg="fuse_optimizers" exec="fixed_lag_smoother_node" name="fls_node_tier1" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task8)/config/two_tier.yaml"/>
+  </node>
+
+  <node pkg="fuse_optimizers" exec="fixed_lag_smoother_node" name="fls_node_tier2" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+    <param from="$(find-pkg-share task8)/config/two_tier.yaml"/>
+  </node>
+
+  <node pkg="task8" exec="beacon_node" name="beacon_node" namespace="r2d2">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+  <node pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share task8)/config/two_tier.rviz" name="rviz">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+</launch>

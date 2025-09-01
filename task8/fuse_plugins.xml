@@ -1,0 +1,14 @@
+<library path="task8">
+  <class type="task8::RangeConstraint" base_class_type="fuse_core::Constraint">
+    <description>
+      Implements a range-only measurement constraint between the robot and a known, fixed landmark. The main purpose is
+      to demonstrate how to write your own constraint classes.
+    </description>
+  </class>
+  <class type="task8::BeaconSensorModel" base_class_type="fuse_core::SensorModel">
+    <description>
+      Implements a new sensor model that generates range constraints between the robot and fixed, known landmarks. The
+      main purpose is to demonstrate how to write your own sensor model classes.
+    </description>
+  </class>
+</library>

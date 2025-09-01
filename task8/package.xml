@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>task8</name>
+  <version>0.0.0</version>
+  <description>Now, let's see if we can't figure out what you are, my little friend, and where you come from.</description>
+  <maintainer email="tmoore@locusrobotics.com">Tom Moore</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>fuse_constraints</depend>
+  <depend>fuse_core</depend>
+  <depend>fuse_models</depend>
+  <depend>fuse_variables</depend>
+  <depend>nav_msgs</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>workshop_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <exec_depend>fuse_optimizers</exec_depend>
+  <exec_depend>fuse_publishers</exec_depend>
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>r2d2_description</exec_depend>
+  <exec_depend>task3</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <fuse_core plugin="${prefix}/fuse_plugins.xml" />
+  </export>
+</package>
