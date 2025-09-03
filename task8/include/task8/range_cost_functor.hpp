@@ -95,8 +95,8 @@ public:
     // when the radicand is zero. To have a well-defined cost function, we implement an alternative
     // cost equation for that case. Thankfully this does not cause any issues with Ceres Solver's
     // auto-diff system. See http://ceres-solver.org/automatic_derivatives.html#pitfalls
-    auto dx = robot_position[0] - beacon_x_;
-    auto dy = robot_position[1] - beacon_y_;
+    auto dx = ????? - beacon_x_;
+    auto dy = ????? - beacon_y_;
     auto norm_sq = dx * dx + dy * dy;
     if (norm_sq > 0.0) {
       auto z_hat = ceres::sqrt(norm_sq);

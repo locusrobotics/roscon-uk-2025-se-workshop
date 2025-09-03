@@ -121,7 +121,7 @@ public:
    *
    * @param[in] msg - The range message to process
    */
-  void rangesCallback(const workshop_msgs::msg::BeaconRangeArray & msg);
+  void rangesCallback(const ????? & msg);
 
 protected:
   /**
@@ -154,7 +154,7 @@ protected:
   rclcpp::Logger logger_;  //!< The sensor model's logger
 
   //!< ROS subscription for the beacon range sensor measurements
-  rclcpp::Subscription<workshop_msgs::msg::BeaconRangeArray>::SharedPtr sub_;
+  rclcpp::Subscription<?????>::SharedPtr sub_;
 };
 
 }  // namespace task8

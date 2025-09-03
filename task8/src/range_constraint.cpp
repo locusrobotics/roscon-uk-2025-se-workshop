@@ -26,7 +26,7 @@ namespace task8
 // fuse_core::Constraint(source, { robot_position.uuid(), beacon_position.uuid() })
 RangeConstraint::RangeConstraint(
   const std::string & source,
-  const fuse_variables::Position2DStamped & robot_position,
+  const ????? & robot_position,
   const geometry_msgs::msg::Point & beacon_position,
   const double z,
   const double sigma)
@@ -59,7 +59,7 @@ ceres::CostFunction * RangeConstraint::costFunction() const
   //        the size is 2.
   // If there were additional involved variables, the size of each variable would appear here in
   // order.
-  return new ceres::AutoDiffCostFunction<RangeCostFunctor, 1, 2>(
+  return new ceres::AutoDiffCostFunction<RangeCostFunctor, ?????, ?????>(
     new RangeCostFunctor(beacon_position_.x, beacon_position_.y, z_, sigma_));
 }
 

@@ -75,7 +75,7 @@ public:
    */
   RangeConstraint(
     const std::string & source,
-    const fuse_variables::Position2DStamped & robot_position,
+    const ????? & robot_position,
     const geometry_msgs::msg::Point & beacon_position,
     const double z,
     const double sigma);
