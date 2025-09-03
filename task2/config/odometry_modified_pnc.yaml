@@ -23,5 +23,5 @@ r2d2:
                            false, false, true,    # roll velocity, pitch velocity, yaw velocity
                            false, false, false]   # x acceleration, y acceleration, z acceleration
 
-            # TM: replace with ? values
-            process_noise_covariance: [1e-6, 1e-6, 1e-6, 1e-6, 1e-6, 1e-6, 0.1, 0.1, 1e-6, 1e-6, 1e-6, 0.1, 1e-6, 1e-6, 1e-6]
+#---------> Replace the ? values
+            process_noise_covariance: [1e-6, 1e-6, 1e-6, 1e-6, 1e-6, 1e-6, ?, ?, 1e-6, 1e-6, 1e-6, ?, 1e-6, 1e-6, 1e-6]

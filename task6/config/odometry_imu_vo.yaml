@@ -21,9 +21,7 @@ r2d2:
               odometry_sensor:
                 type: fuse_models::Odometry2D
                 motion_models: [unicycle_motion_model]
-              visual_odometry_sensor:
-                type: fuse_models::Odometry2D
-                motion_models: [unicycle_motion_model]
+#-----------> Add the visual odometry sensor here!
               imu_sensor:
                 type: fuse_models::Imu2D
                 motion_models: [unicycle_motion_model]
@@ -40,11 +38,7 @@ r2d2:
               linear_velocity_dimensions: ['x', 'y']
               angular_velocity_dimensions: ['yaw']
 
-            visual_odometry_sensor:
-              topic: 'odometry_visual'
-              twist_target_frame: 'r2d2/base_link'
-              linear_velocity_dimensions: ['x', 'y']
-              angular_velocity_dimensions: ['yaw']
+#---------> Add the visual odometry sensor configuration here!
 
             imu_sensor:
               topic: 'imu'

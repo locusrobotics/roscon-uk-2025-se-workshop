@@ -21,9 +21,7 @@ r2d2:
               odometry_sensor:
                 type: fuse_models::Odometry2D
                 motion_models: [unicycle_motion_model]
-              imu_sensor:
-                type: fuse_models::Imu2D
-                motion_models: [unicycle_motion_model]
+#-----------> Add the IMU sensor here!
 
             initial_localization_sensor:
               publish_on_startup: true
@@ -37,10 +35,7 @@ r2d2:
               linear_velocity_dimensions: ['x', 'y']
               angular_velocity_dimensions: ['yaw']
 
-            imu_sensor:
-              topic: 'imu'
-              twist_target_frame: 'r2d2/base_link'
-              angular_velocity_dimensions: ['yaw']
+#---------> Add the IMU sensor configuration here!
 
             publishers:
               filtered_publisher:

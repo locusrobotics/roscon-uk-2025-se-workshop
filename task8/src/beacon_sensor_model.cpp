@@ -42,7 +42,7 @@ void BeaconSensorModel::onStart()
   rclcpp::SubscriptionOptions sub_options;
   sub_options.callback_group = cb_group_;
 
-  sub_ = rclcpp::create_subscription<workshop_msgs::msg::BeaconRangeArray>(
+  sub_ = rclcpp::create_subscription<?????>(
     interfaces_,
     "beacon_ranges",
     10,
@@ -62,7 +62,7 @@ void BeaconSensorModel::onStop()
   sub_.reset();
 }
 
-void BeaconSensorModel::rangesCallback(const workshop_msgs::msg::BeaconRangeArray & msg)
+void BeaconSensorModel::rangesCallback(const ????? & msg)
 {
   // We received a new message for our sensor. This is where most of the processing happens for our
   // sensor model. We take the published ROS message and transform it into one or more Constraints,
@@ -84,7 +84,7 @@ void BeaconSensorModel::rangesCallback(const workshop_msgs::msg::BeaconRangeArra
 
   // The transaction needs to know about all of the involved variables as well as the constraints,
   // so insert the robot position variable now.
-  transaction->addVariable(robot_position);
+  transaction->addVariable(?????);
 
   // Additionally the transaction needs to know about all of the individual timestamps involved in
   // this transaction. Since not every variable is associated with a timestamp, I could not work out
@@ -94,7 +94,7 @@ void BeaconSensorModel::rangesCallback(const workshop_msgs::msg::BeaconRangeArra
 
   // Loop over the pointcloud, extracting the beacon ID, range, and measurement uncertainty for each
   // detected beacon
-  for (const auto & beacon_range : msg.ranges) {
+  for (const auto & beacon_range : ?????) {
     // Create a constraint for this beacon range sensor measurement
     auto constraint = task8::RangeConstraint::make_shared(
       this->name(),

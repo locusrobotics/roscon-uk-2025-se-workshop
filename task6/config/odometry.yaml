@@ -18,9 +18,7 @@ r2d2:
                 type: fuse_models::Unicycle2DIgnition
                 motion_models: [unicycle_motion_model]
                 ignition: true
-              odometry_sensor:
-                type: fuse_models::Odometry2D
-                motion_models: [unicycle_motion_model]
+#-----------> Add the odometry sensor here!
 
             initial_localization_sensor:
               publish_on_startup: true
@@ -28,11 +26,7 @@ r2d2:
               initial_state: [-465.90, -834.2617, -1.584, 0.000, 0.000, 0.000, 0.000, 0.000]
               initial_sigma: [  0.100,     0.100,  0.100, 0.100, 0.100, 0.001, 0.100, 0.001]
 
-            odometry_sensor:
-              topic: 'odometry'
-              twist_target_frame: 'r2d2/base_link'
-              linear_velocity_dimensions: ['x', 'y']
-              angular_velocity_dimensions: ['yaw']
+#---------> Add the odometry sensor config here!
 
             publishers:
               filtered_publisher:

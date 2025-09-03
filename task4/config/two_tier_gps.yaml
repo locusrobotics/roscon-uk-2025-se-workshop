@@ -63,12 +63,7 @@ r2d2:
                            false, false, true,
                            false, false, false]
 
-            odom1: odometry/gps
-            odom1_config: [true,  true,  false,
-                           false, false, false,
-                           false, false, false,
-                           false, false, false,
-                           false, false, false]
+ #--------> Add the GPS sensor and config here
 
             imu0: imu
             imu0_config: [false, false, false,

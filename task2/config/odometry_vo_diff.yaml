@@ -25,12 +25,13 @@ r2d2:
                            false, false, true,   # roll velocity, pitch velocity, yaw velocity
                            false, false, false]   # x acceleration, y acceleration, z acceleration
 
-            odom1: odometry_visual
-            odom1_config: [true,  true,  false,
-                           false, false, true,
-                           false, false, false,
-                           false, false, false,
-                           false, false, false]
+#---------> Fill these out
+            odom1: ?
+            odom1_config: [?, ?, ?,
+                           ?, ?, ?,
+                           ?, ?, ?,
+                           ?, ?, ?,
+                           ?, ?, ?]
 
-            # TM: replace 1 with ?
-            odom1_differential: true
+#---------> Fill this out
+            odom1_differential: ?
