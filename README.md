@@ -28,8 +28,6 @@ For convenience, we have provided a number of handy shortcuts for working with t
 
 ##### Directory shortcuts
 
-The the main workspace has its own environment variable:
-
 `$ws` - Variable for the workspace root  
 `$bags` - Variable for the bag directory  
 `$taskN` - Variable for the directory for task N (where N ranges from 1 to 8)
@@ -37,7 +35,7 @@ The the main workspace has its own environment variable:
 ##### Command aliases
 
 `s` - Sources the workspace `ws/install/setup.bash`  
-`cb` - Buulds the workspace by running `catkin build --symlink-install`
+`cb` - Buulds the workspace by running `cd /root/ws && catkin build --symlink-install && cd -`
 
 ### Building from source
 
@@ -65,7 +63,7 @@ Everything should then work in the same way as it would within the Docker contai
 
 ## ROS Bags
 
-This workshop makes use of a number of ROS 2 bag files. The repository contains compressed versions of them, along with a small bash script for decompressing them. This has already been executed for you in the Docker container, but users who have manually cloned the GitHub repository should
+This workshop makes use of a number of ROS 2 bag files. The repository contains compressed versions of them, along with a small bash script for decompressing them. This has already been executed for you in the Docker container, but users who have manually cloned the GitHub repository should run
 
 ```
 cd ws/roscon-uk-2025-se-workshop/bags
