@@ -24,13 +24,13 @@ To start, we will fuse only wheel encoder odometry into our state estimate. This
 1. We want to make our first odometry (as in `nav_msgs/Odometry`) input our wheel encoder odometry. Set the topic for `odom0` accordingly.
 1. For this exercise, we will fuse the `x` velocity, the `y` velocity, and the `yaw` velocity from the wheel encoders
 
-  > **Question**: If R2-D2 is a differential drive robot (let's assume he is), why are we fusing the `y` velocity?
+    > **Question**: If R2-D2 is a differential drive robot (let's assume he is), why are we fusing the `y` velocity?
 
 1. Run the filter and `rviz2` with:
 
         $ ros2 launch task1 ekf.launch
 
-  > **Question**: For comparison, we show the raw wheel encoder data alongside the EKF output. What do you note about the output?
+    > **Question**: For comparison, we show the raw wheel encoder data alongside the EKF output. What do you note about the output?
 
 
 1. The bag starts and ends at the same location. Use the `rviz2` measurement tool to measure the distance from the robot’s first pose to its last. Make a mental note of the value!
@@ -43,7 +43,7 @@ We will now be adding IMU sensor data to our filter.
 1. The wheel encoder odometry configuration has been provided for you
 1. You need to now fill out the configuration for the IMU topic. We want to fuse `yaw` velocity and `x` acceleration from the sensor.
 
-  > **Question**: Why not fuse the `y` acceleration from the IMU as we did with the `y` velocity for the wheel odometry?
+    > **Question**: Why not fuse the `y` acceleration from the IMU as we did with the `y` velocity for the wheel odometry?
 
 1. R2’s holographic projector is bulky and made mounting the IMU difficult, so his designers mounted the IMU such that `+X` points to the ground, `+Y` points to R2’s right, and `+Z` points towards his back. **This will have ramifications for the sensor configuration!**
 
@@ -56,7 +56,7 @@ We will now be adding IMU sensor data to our filter.
     1. One has odometry + IMU
     1. (Raw wheel encoder data is also displayed.)
 
-  > **Question**: What do you note about them? How does the distance from the last pose to the first compare to the odometry-only instance?
+    > **Question**: What do you note about them? How does the distance from the last pose to the first compare to the odometry-only instance?
 
 ## Task 1c Odometry + IMU + VO
 
@@ -70,9 +70,9 @@ We will now add visual odometry data as an input to the filter
         $ ros2 launch task1 ekf.launch include_imu_vo:=True
 
 1. We now have three EKF instances running:
-  1. One with just wheel encoder data
-  1. One with wheel encoder + IMU data
-  1. One with wheel encoder, IMU, and visual odometry data
-  1. (Raw wheel encoder data is also displayed.)
-  
-  > **Question**: What do you note about the output?
+    1. One with just wheel encoder data
+    1. One with wheel encoder + IMU data
+    1. One with wheel encoder, IMU, and visual odometry data
+    1. (Raw wheel encoder data is also displayed.)
+
+    > **Question**: What do you note about the output?
