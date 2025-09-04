@@ -70,6 +70,10 @@ cd ws/roscon-uk-2025-se-workshop/bags
 ./decompress.sh
 ```
 
+When playing back bags, it's important to remember to always use the `--clock` flag, as we are using simulated time in the nodes.
+
+Bag replay can be sped up or slowed down using the up and down arrow keys, respectively. This will likely be useful for some of the longer-running bags and their associated tasks.
+
 ## Tasks
 
 ### Session 1: `robot_localization`
