@@ -34,7 +34,6 @@ r2d2:
                           false, false, true,
                           true,  false, false]
 
-    # TM: remove, and make task to add it
     ekf_node_tier2:
         ros__parameters:
             frequency: 30.0

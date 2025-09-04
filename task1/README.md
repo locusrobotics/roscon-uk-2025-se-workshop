@@ -34,7 +34,6 @@ To start, we will fuse only wheel encoder odometry into our state estimate. This
 
     > **Question**: For comparison, we show the raw wheel encoder data alongside the EKF output. What do you note about the output?
 
-
 1. The bag starts and ends at the same location. Use the `rviz2` measurement tool to measure the distance from the robot’s first pose to its last. Make a mental note of the value!
 
 ## Task 1b: Odometry + IMU
@@ -62,7 +61,7 @@ We will now be adding IMU sensor data to our filter.
 
     > **Question**: What do you note about them? How does the distance from the last pose to the first compare to the odometry-only instance?
 
-## Task 1c Odometry + IMU + VO
+## Task 1c: Odometry + IMU + VO
 
 We will now add visual odometry data as an input to the filter
 
