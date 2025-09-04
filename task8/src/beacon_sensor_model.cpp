@@ -78,7 +78,7 @@ void BeaconSensorModel::rangesCallback(const ????? & msg)
   // rclcpp::Clock(RCL_SYSTEM_TIME).now() if the sensor data is not stamped.
   transaction->stamp(msg.header.stamp);
 
-  // All of the measured range constraints will involve the robot position at the beacons sensor
+  // All of the measured range constraints will involve the robot position at the beacon sensor
   // message timestamp. Construct a robot position variable at that timestamp now.
   auto robot_position = fuse_variables::Position2DStamped::make_shared(msg.header.stamp);
 

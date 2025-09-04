@@ -54,21 +54,17 @@ public:
    * This is the constructor that will be used from within the BeaconSensorModel. It accepts
    * references to the variable involved with this specific measurement -- the robot position at
    * the time the measurement was sampled. We also receive the fixed beacon position, which is
-   * NOT added to the graph as a variable.
+   * NOT added to the graph as a variable
    *
-   * Note that, when measuring subset of dimensions, empty axis vectors are permitted. This
-   * signifies, e.g., that you don't want to measure any of the quantities in that variable.
-   *
-   * The mean is given as a vector. The first components (if any) will be dictated, both in content
-   * and in ordering, by the value of the \p linear_indices. The final component (if any) is
-   * dictated by the \p angular_indices. The covariance matrix follows the same ordering.
+   * This constraint has only a one dimension in the measurement, which is why z and sigma are just
+   * doubles. In the general case, you'd want to use Eigen types for both.
    *
    * @param[in] source - The name of the sensor that generated this constraint. This is largely
    *                     information to aid in debugging or visualizing the system. If multiple
    *                     sensors of the same type exist, being able to disambiguate the constraints
    *                     from sensor1 versus sensor2 is useful.
    * @param[in] robot_position - The 2D position of the robot at the time the measurement was
-   *                             sampled
+   *                             sampled (a variable in the graph)
    * @param[in] beacon_position - The known, fixed 2D position of the sampled beacon
    * @param[in] z - The distance measured between the robot and beacon by our new sensor
    * @param[in] sigma - The uncertainty of measured distance
