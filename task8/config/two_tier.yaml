@@ -93,7 +93,6 @@ r2d2:
               imu_sensor:
                 type: fuse_models::Imu2D
                 motion_models: [unicycle_motion_model]
-              # TM: remove, and make task to add it
               beacon_sensor:
                 type: task8::BeaconSensorModel
                 motion_models: [unicycle_motion_model]

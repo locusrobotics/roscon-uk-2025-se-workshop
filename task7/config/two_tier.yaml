@@ -65,7 +65,6 @@ r2d2:
               publish_frequency: 30.0
               publish_tf: true
 
-    # TM: remove, and make task to add it
     fls_node_tier2:
         ros__parameters:
             optimization_frequency: 30.0

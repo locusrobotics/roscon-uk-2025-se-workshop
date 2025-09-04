@@ -32,5 +32,4 @@ r2d2:
                            false, false, false,
                            false, false, false]
 
-            # TM: replace 1 with ?
             odom1_differential: true
