@@ -37,6 +37,10 @@ For convenience, we have provided a number of handy shortcuts for working with t
 `s` - Sources the workspace `ws/install/setup.bash`  
 `cb` - Buulds the workspace by running `cd /root/ws && catkin build --symlink-install && cd -`
 
+#### Installed Editors
+
+We have included `vim`, `emacs`, and `nano` as editors in the container. Other editors can be installed via `apt`.
+
 ### Building from source
 
 If you are unable or unwilling to use Docker, you have the option to clone the repository and build it locally:
