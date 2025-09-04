@@ -34,13 +34,13 @@ namespace task8
  *
  * The "sensor model" class provides an interface to ROS, allowing sensor messages to be received.
  * The sensor model class also acts as a "factory" (in a programming sense) that creates new sensor
- * constraints for each received sensor measurement, and forward those constraints the fuse
+ * constraints for each received sensor measurement, and forwards those constraints to the fuse
  * optimizer. The optimizer is where the constraints from all configured sensors are combined, and
  * the best possible value for each state variable is determined.
  *
  * Each fuse SensorModel is implemented as a plugin, which is loaded by the optimizer at runtime.
- * This allows new sensor models to be implemented outside of the main fuse package, such as in this
- * task8 package. The fuse SensorModel base class defines a few basic methods for
+ * This allows new sensor models to be implemented outside of the main fuse package, such as in
+ * this task8 package. The fuse SensorModel base class defines a few basic methods for
  * communicating between the derived SensorModel and the optimizer.
  *  - initialize()
  *    This is called by the optimizer after construction. This is a common pattern used by plugins.
@@ -111,7 +111,7 @@ public:
   /**
    * @brief Callback for range measurement messages
    *
-   * In a real scenario, we would likely model the beacons themselves as variables in our graph
+   * In a real scenario, we would likely model the beacons themselves as variables in our graph.
    * For the sake of simplicity, we assume that the beacon positions are known with extreme
    * precision a priori, such that we can treat their positions as ground truth.
    *

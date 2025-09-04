@@ -53,6 +53,8 @@ public:
    * for the optimizer. In the case of our range-only sensor, this includes the measured range to
    * the beacon and the measurement uncertainty.
    *
+   * @param[in] beacon_x The x position of the beacon
+   * @param[in] beacon_y The y position of the beacon
    * @param[in] z The measured range to the beacon
    * @param[in] sigma The standard deviation of the range measurement
    */
@@ -108,8 +110,8 @@ public:
   }
 
 private:
-  double beacon_x_;  //!< The position of the beacon
-  double beacon_y_;
+  double beacon_x_;  //!< The X position of the beacon
+  double beacon_y_;  //!< The Y position of the beacon
   double sigma_;  //!< The standard deviation of the range measurement
   double z_;  //!< The measured range to the beacon
 };
