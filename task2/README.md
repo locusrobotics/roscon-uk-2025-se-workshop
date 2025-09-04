@@ -15,6 +15,8 @@ Tuning the process noise covariance matrix can produce very different results.
 > **Question**: Recall that in Task 1a, we fused just wheel encoder odometry, but our output state estimate did not very closely match the input wheel encoder data.
 Why?
 
+### Steps
+
 1. Edit the file `$(task2)/config/odometry_pnc.yaml`
 1. Edit the `process_noise_covariance` for the wheel encoder odometry by increasing the values for `x` velocity, `y` velocity (not really necessary), and `yaw` velocity.
 1. Now run
@@ -30,6 +32,8 @@ Why?
 Sometimes, a topic contains only pose data, but you may not want to fuse that into your state estimate (e.g., if you have two pose sources, or the pose data is too infrequent).
 
 Even though our VO data produces pose and velocity data, we’re going to pretend it only contains pose data, and that we don’t want to use it.
+
+### Steps
 
 1. Edit the file `$(task2)/config/odometry_vo_diff.yaml`
 1. The `odom1` sensor should have a topic of `odometry_visual`, and we should be fusing `x`, `y`, and `yaw` (**not** velocity!)

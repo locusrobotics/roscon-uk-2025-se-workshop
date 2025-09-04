@@ -10,7 +10,7 @@ In many systems, when a robot is equipped with wheel encoders, the node that pub
 
 ## Bag Data
 
-The bag we will be working with can be found in bags/planar/planar.db3. Familiarise yourself with the data:
+The bag we will be working with can be found in `$(bags)/planar/planar.db3`. Familiarise yourself with the data:
 
 - Look at the bag information with `ros2 bag info planar.db3`
 - Play the bag with `ros2 bag play planar.db3 --clock`, then running `ros2 topic echo <topic name>` for the topics you want to analyse.
@@ -19,6 +19,8 @@ The bag we will be working with can be found in bags/planar/planar.db3. Familiar
 ## Task 1a: Odometry Only
 
 To start, we will fuse only wheel encoder odometry into our state estimate. This isn't really that useful in practice, but it's a neccesary starting point.
+
+### Steps
 
 1. Edit the file `$(task1)/config/odometry.yaml`
 1. We want to make our first odometry (as in `nav_msgs/Odometry`) input our wheel encoder odometry. Set the topic for `odom0` accordingly.
@@ -38,6 +40,8 @@ To start, we will fuse only wheel encoder odometry into our state estimate. This
 ## Task 1b: Odometry + IMU
 
 We will now be adding IMU sensor data to our filter.
+
+### Steps
 
 1. Edit the file `$(task1)/config/odometry_imu.yaml`
 1. The wheel encoder odometry configuration has been provided for you
@@ -61,6 +65,8 @@ We will now be adding IMU sensor data to our filter.
 ## Task 1c Odometry + IMU + VO
 
 We will now add visual odometry data as an input to the filter
+
+### Steps
 
 1. Edit the file `$(task1)/config/odometry_imu_vo.yaml`
 1. The wheel encoder odometry and IMU configurations have been provided for you
