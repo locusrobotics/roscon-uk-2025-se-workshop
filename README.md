@@ -18,8 +18,14 @@ MacOS users should also install [XQuartz](https://www.xquartz.org), as the conta
 The most straightforward way to start the container is the following:
 
 ```
-wget <URL for docker-compose.yaml>
-docker compose run <name of container>
+wget https://tinyurl.com/rosconuk-se-docker -O docker-compose.yaml
+docker compose run rosconuk2025
+```
+
+Users will also need a second terminal attached to the same instance so that bags can be played:
+
+```
+docker compose exec rosconuk2025 /bin/bash
 ```
 
 #### Docker image shortcuts
