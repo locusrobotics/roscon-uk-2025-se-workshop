@@ -76,7 +76,7 @@ r2d2:
             frequency: 30.0
             delay: 8.0
 
-            magnetic_declination_radians: 0.181688775
+            magnetic_declination_radians: ?????
             yaw_offset: 0.0
 
             zero_altitude: true
