@@ -1,9 +1,9 @@
 FROM ros:kilted
 
 RUN apt-get update && apt-get install -y wget xz-utils git git-lfs vim build-essential \
-    ros-kilted-robot-localization ros-kilted-rviz2 ros-kilted-urdf ros-kilted-fuse ros-kilted-xacro
+    ros-kilted-robot-localization ros-kilted-rviz2 ros-kilted-urdf ros-kilted-fuse ros-kilted-xacro \
+    emacs vim nano
 RUN git lfs install
-RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /root/ws/src
 RUN git clone https://github.com/ayrton04/roscon-uk-2025-se-workshop.git
