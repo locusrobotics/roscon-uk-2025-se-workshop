@@ -19,7 +19,7 @@ RUN  /bin/bash -c "source /opt/ros/kilted/setup.bash && cd /root/ws && colcon bu
 ENV ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 ENV ws=/root/ws
 ENV task1=/root/ws/src/roscon-uk-2025-se-workshop/task1
-ENV task1=/root/ws/src/roscon-uk-2025-se-workshop/task2
+ENV task2=/root/ws/src/roscon-uk-2025-se-workshop/task2
 ENV task3=/root/ws/src/roscon-uk-2025-se-workshop/task3
 ENV task4=/root/ws/src/roscon-uk-2025-se-workshop/task4
 ENV task5=/root/ws/src/roscon-uk-2025-se-workshop/task5
