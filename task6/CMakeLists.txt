@@ -36,7 +36,7 @@ install(FILES
 
 install(FILES
   launch/fls.launch.xml
-  DESTINATION share/${PROJECT_NAME}/launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
 
