@@ -37,7 +37,7 @@ install(FILES
 
 install(FILES
   launch/ekf.launch.xml
-  DESTINATION share/${PROJECT_NAME}/launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
 ament_package()
