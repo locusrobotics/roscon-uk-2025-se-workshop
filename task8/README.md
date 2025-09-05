@@ -133,5 +133,5 @@ As with Task 7, we will be using the planar bag dataset.
 1. Edit the file `$task8/config/two_tier.yaml`
 1. Add the beacon sensor to your configuration
 
-    Terminal 1: `ros2 launch task8 fls.launch`  
+    Terminal 1: `ros2 launch task8 fls.launch.xml`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`

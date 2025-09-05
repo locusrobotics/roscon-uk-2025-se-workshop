@@ -57,7 +57,7 @@ To start, we will fuse only wheel encoder odometry into our state estimate. This
 
 1. Run the filter and `rviz2` with:
 
-    Terminal 1: `ros2 launch task1 ekf.launch`  
+    Terminal 1: `ros2 launch task1 ekf.launch.xml`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
     > **Question**: For comparison, we show the raw wheel encoder data alongside the EKF output. What do you note about the output?
@@ -80,7 +80,7 @@ We will now be adding IMU sensor data to our filter.
 
 1. Run the filter and `rviz2` with:
 
-    Terminal 1: `ros2 launch task1 ekf.launch include_imu:=True`  
+    Terminal 1: `ros2 launch task1 ekf.launch.xml include_imu:=True`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
 1. The launch file runs two instances:
@@ -101,7 +101,7 @@ We will now add visual odometry data as an input to the filter
 1. As with wheel encoder odometry, we want to fuse `x`, `y`, and `yaw` velocities into the filter
 1. Run the filter and `rviz2` with:
 
-    Terminal 1: `ros2 launch task1 ekf.launch include_imu_vo:=True`  
+    Terminal 1: `ros2 launch task1 ekf.launch.xml include_imu_vo:=True`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
 1. We now have three EKF instances running:

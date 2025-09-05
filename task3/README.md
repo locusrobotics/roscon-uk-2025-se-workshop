@@ -47,5 +47,5 @@ As with Task 1 and Task 2, we will be using the planar bag dataset.
 1. We want the filter to trust the pose data, but not absolutely. Tune your `process_noise_covariance` accordingly.
 1. After editing the config, run the following:
 
-    Terminal 1: `ros2 launch task3 ekf.launch`  
+    Terminal 1: `ros2 launch task3 ekf.launch.xml`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`

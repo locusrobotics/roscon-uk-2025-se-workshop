@@ -97,5 +97,5 @@ The bag we will be working with can be found in `$bags/gps/gps.db3`. Familiarise
 1. Add the GPS sensor. Remember that we are only fusing x and y position.
 1. After editing the config, run the following:
 
-    Terminal 1: `ros2 launch task4 ekf.launch`  
+    Terminal 1: `ros2 launch task4 ekf.launch.xml`  
     Terminal 2: `ros2 bag play $bags/gps/gps.db3 --clock`
