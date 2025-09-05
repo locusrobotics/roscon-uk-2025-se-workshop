@@ -67,11 +67,12 @@ install(DIRECTORY include/
   DESTINATION include/${PROJECT_NAME}
 )
 
-install(DIRECTORY
-  config
-  launch
+# If we install a directory, --symlink-install doesn't work
+install(FILES
+  config/two_tier.yaml
+  config/two_tier.rviz
+  launch/fls.launch.xml
   DESTINATION share/${PROJECT_NAME}
-  USE_SOURCE_PERMISSIONS
 )
 
 pluginlib_export_plugin_description_file(fuse_core fuse_plugins.xml)

@@ -23,11 +23,18 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(DIRECTORY
-  config
-  launch
+# If we install a directory, --symlink-install doesn't work
+install(FILES
+  config/odometry_modified_pnc.yaml
+  config/odometry_modified_pnc.rviz
+  config/odometry_vo_diff.yaml
+  config/odometry_vo_diff.rviz
+  config/odometry_vo.yaml
+  config/odometry.yaml
+  config/odometry.rviz
+  launch/ekf.launch.xml
   DESTINATION share/${PROJECT_NAME}
-  USE_SOURCE_PERMISSIONS
 )
+
 
 ament_package()
