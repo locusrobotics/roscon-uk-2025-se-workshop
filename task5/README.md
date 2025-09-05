@@ -22,5 +22,5 @@ The bag we will be working with can be found in `$bags/subsea_3d/subsea_3d.db3`.
 1. Fill out the missing values
 1. After editing the config, run the following:
 
-    Terminal 1: `ros2 launch task5 ekf.launch`  
+    Terminal 1: `ros2 launch task5 ekf.launch.xml`  
     Terminal 2: `ros2 bag play $bags/subsea_3d/subsea_3d.db3 --clock`

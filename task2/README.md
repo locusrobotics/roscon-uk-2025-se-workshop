@@ -57,7 +57,7 @@ Why?
 1. Edit the `process_noise_covariance` for the wheel encoder odometry by increasing the values for `x` velocity, `y` velocity (not really necessary), and `yaw` velocity.
 1. Now run
 
-    Terminal 1: `ros2 launch task2 ekf.launch modified_pnc:=True`  
+    Terminal 1: `ros2 launch task2 ekf.launch.xml modified_pnc:=True`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
 1. The output shows the original configuration alongside your updated configuration
@@ -77,7 +77,7 @@ Even though our VO data produces pose and velocity data, we’re going to preten
 1. Enable `differential` mode for `odom1`
 1. After editing the config, run the following:
 
-    Terminal 1: `ros2 launch task2 ekf.launch differential:=True`  
+    Terminal 1: `ros2 launch task2 ekf.launch.xml differential:=True`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
 1. The `rviz2` output also shows odometry + VO data that is fusing only velocity (note: none of our estimates are using the IMU).

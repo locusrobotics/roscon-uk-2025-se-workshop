@@ -76,7 +76,7 @@ As with Task 6, we will be using the planar bag dataset.
 1. We want the filter to trust the pose data, but not absolutely. Tune your `process_noise_diagonal` accordingly.
 1. After editing the config, run the following:
 
-    Terminal 1: `ros2 launch task7 ekf.launch`  
+    Terminal 1: `ros2 launch task7 ekf.launch.xml`  
     Terminal 2: `ros2 bag play $bags/planar/planar.db3 --clock`
 
     > **Question**: What do you note about the difference with the EKF output?
