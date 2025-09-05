@@ -27,8 +27,12 @@ endif()
 install(FILES
   config/two_tier_gps.yaml
   config/two_tier_gps.rviz
+  DESTINATION share/${PROJECT_NAME}/config
+)
+
+install(FILES
   launch/ekf.launch.xml
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}/launch
 )
 
 ament_package()

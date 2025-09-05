@@ -32,9 +32,12 @@ install(FILES
   config/odometry_vo.yaml
   config/odometry.yaml
   config/odometry.rviz
-  launch/ekf.launch.xml
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}/config
 )
 
+install(FILES
+  launch/ekf.launch.xml
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 
 ament_package()
