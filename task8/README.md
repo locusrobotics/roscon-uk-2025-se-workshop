@@ -70,7 +70,7 @@ private:
 
 #### Example Ceres Cost Function
 
-The actual cost function is implemented here. Ceres will pass the variable data to the functor. The user needs to use the variable value, the measurement and covariance provided in the constructor, and any other data it needs to fill out the residual (error). The residual error gets weighted by the square root information matrix. Note that for a single-dimensional measurement and residual, this weighting factor would just be `1 / sigma`.
+The actual cost function is implemented here. Ceres will pass the variable data to the functor. The user needs to use the variable value, the measurement and covariance provided in the constructor, and any other data it needs to compute the residual (error). The residual error gets weighted by the square root information matrix. Note that for a single-dimensional measurement and residual, this weighting factor would just be `1 / sigma`.
 
 ```
 class MyCostFunctor
