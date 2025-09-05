@@ -23,11 +23,12 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(DIRECTORY
-  config
-  launch
+# If we install a directory, --symlink-install doesn't work
+install(FILES
+  config/two_tier.yaml
+  config/two_tier.rviz
+  launch/fls.launch.xml
   DESTINATION share/${PROJECT_NAME}
-  USE_SOURCE_PERMISSIONS
 )
 
 ament_package()
