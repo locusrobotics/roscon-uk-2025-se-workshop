@@ -11,8 +11,6 @@ We have created a Docker image for the workshop, and attendees are encouraged to
 ### Docker installation
 If you do not have Docker installed, please follow the instructions [here](https://docs.docker.com/engine/install/). You will also need the `docker-compose` plugin.
 
-MacOS users should also install [XQuartz](https://www.xquartz.org), as the container will need to display `rviz2`.
-
 ### Docker image installation
 
 The most straightforward way to start the container is the following:
@@ -34,9 +32,9 @@ For convenience, we have provided a number of handy shortcuts for working with t
 
 ##### Directory shortcuts
 
-`$ws` - Variable for the workspace root  
-`$bags` - Variable for the bag directory  
-`$taskN` - Variable for the directory for task N (where N ranges from 1 to 8)
+`$ws` - Environment variable for the workspace root  
+`$bags` - Environment variable for the bag directory  
+`$taskN` - Environment variable for the directory for task N (where N ranges from 1 to 8)
 
 ##### Command aliases
 
@@ -45,7 +43,8 @@ For convenience, we have provided a number of handy shortcuts for working with t
 
 #### Installed Editors
 
-We have included `vim`, `emacs`, and `nano` as editors in the container. Other editors can be installed via `apt`.
+We have included `vim`, `emacs`, and `nano` as editors in the container. Other editors can be installed via `apt`. The
+docker container (when run via `docker compose`) supports GUIs.
 
 ### Building from source
 
