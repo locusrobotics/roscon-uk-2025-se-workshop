@@ -27,9 +27,12 @@ endif()
 install(FILES
   config/subsea_3d.yaml
   config/subsea_3d.rviz
-  launch/ekf.launch.xml
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}/config
 )
 
+install(FILES
+  launch/ekf.launch.xml
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 
 ament_package()

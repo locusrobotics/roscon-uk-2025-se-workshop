@@ -31,8 +31,13 @@ install(FILES
   config/odometry_imu.rviz
   config/odometry_imu_vo.yaml
   config/odometry_imu_vo.rviz
-  launch/fls.launch.xml
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}/config
 )
+
+install(FILES
+  launch/fls.launch.xml
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
 
 ament_package()
