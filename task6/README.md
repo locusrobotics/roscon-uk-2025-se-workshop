@@ -6,6 +6,63 @@ In this task, we will revisit the first planar robot task that we carried out wi
 
 We will again be building our state estimate by adding one sensor input at a time to our configuration. We will review the results and satisfy ourselves that the filter is behaving as we want before proceeding to the next sensor.
 
+## Basic Configuration
+
+```
+optimization_frequency: 20  # How many times we carry out optimisation per second
+transaction_timeout: 0.01   # If adding a transaction fails, and this amount of time elapses, we will drop it
+lag_duration: 0.5           # How much of a state variable history to keep
+
+motion_models:              # Motion model declarations (usually one)
+  unicycle_motion_model:
+    type: fuse_models::Unicycle2D
+
+unicycle_motion_model:      # Parameters specific to the motion model we’ve selected
+  process_noise_diagonal: [0.100, 0.100, 0.100, 0.100, 0.100, 0.100, 0.1, 0.1]  # Same as Q matrix in the EKF
+
+sensor_models:                              # Sensor model declarations
+  initial_localization_sensor:              # Ignition sensor (provides start pose)
+    type: fuse_models::Unicycle2DIgnition
+    motion_models: [unicycle_motion_model]  # Which motion model to use to tie constraints together
+    ignition: true
+  odometry_sensor:                          # Wheel odometry sensor
+    type: fuse_models::Odometry2D
+    motion_models: [unicycle_motion_model]
+  imu_sensor:                               # IMU sensor
+    type: fuse_models::Imu2D
+    motion_models: [unicycle_motion_model]
+
+initial_localization_sensor:  # Ignition sensor-specific parameters
+  publish_on_startup: true
+  #                x      y      yaw    vx     vy     vyaw    ax     ay
+  initial_state: [0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000]
+  initial_sigma: [0.100, 0.100, 0.100, 0.100, 0.100, 0.100, 0.100, 0.100]
+
+odometry_sensor:  # Odometry sensor-specific parameters
+  topic: 'odom'
+  twist_target_frame: 'base_link'
+  linear_velocity_dimensions: ['x', 'y']  # Replaces the boolean vector that r_l uses
+  angular_velocity_dimensions: ['yaw']    #
+
+imu_sensor:       # IMU sensor-specific parameters
+  topic: 'imu'
+  twist_target_frame: 'base_link'
+  angular_velocity_dimensions: ['yaw']    # Replaces the boolean vector that r_l uses
+
+publishers:
+  filtered_publisher:
+    type: fuse_models::Odometry2DPublisher
+
+filtered_publisher:                # Identical concepts to the way r_l manages these
+  topic: 'odom_filtered'
+  base_link_frame_id: 'base_link'
+  odom_frame_id: 'odom'
+  map_frame_id: 'map'
+  world_frame_id: 'odom'
+  publish_tf: true
+  publish_frequency: 10
+```
+
 ## Bag Data
 
 We will once again be working with the bag file `$bags/planar/planar.db3`.
