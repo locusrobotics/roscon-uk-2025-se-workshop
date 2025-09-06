@@ -42,6 +42,8 @@ void onStart() override;
 void onStop() override;
 ```
 
+[fuse_core::AsyncSensorModel](https://github.com/locusrobotics/fuse/blob/2b6e248a08671e5500e3eedaa0f45a8d44e94ba2/fuse_core/include/fuse_core/async_sensor_model.hpp)
+
 #### Example Constraint
 
 `Constraint` classes are effectively wrappers around Ceres cost functions.
@@ -67,6 +69,8 @@ private:
   fuse_core::Vector3d measurement_mean_;  // The measured/prior mean vector for this variable
   fuse_core::Matrix3d measurement_sqrt_information_;  // The square root information matrix
 ```
+
+[fuse_core::Constraint](https://github.com/locusrobotics/fuse/blob/2b6e248a08671e5500e3eedaa0f45a8d44e94ba2/fuse_core/include/fuse_core/constraint.hpp)
 
 #### Example Ceres Cost Function
 
@@ -95,6 +99,8 @@ public:
     residual_map.applyOnTheLeft(measurement_sqrt_information_.template cast<T>());
   }
 ```
+
+[Example](https://github.com/locusrobotics/fuse/blob/2b6e248a08671e5500e3eedaa0f45a8d44e94ba2/fuse_tutorials/include/fuse_tutorials/range_cost_functor.hpp)
 
 ## Bag Data
 
