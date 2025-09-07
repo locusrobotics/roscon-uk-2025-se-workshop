@@ -4,8 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Magenta: FLS Output (Tier 2)1/Shape1"
-        - /Map1
+        - "/Green: FLS Output (Tier 2)1/Shape1"
         - /Map1/Topic1
       Splitter Ratio: 0.8213716149330139
     Tree Height: 1388
@@ -241,13 +240,13 @@ Visualization Manager:
         Value: true
       Enabled: true
       Keep: 600
-      Name: "Magenta: FLS Output (Tier 2)"
+      Name: "Green: FLS Output (Tier 2)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 145; 65; 172
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -352,7 +351,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 30.230178833007812
+      Scale: 90.50772857666016
       Target Frame: r2d2/base_link
       Value: TopDownOrtho (rviz_default_plugins)
       X: 0

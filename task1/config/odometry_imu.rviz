@@ -4,7 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Blue: EKF Output (Odom + IMU)1/Shape1"
+        - "/Green: EKF Output (Odom + IMU)1/Shape1"
       Splitter Ratio: 0.8465116024017334
     Tree Height: 1388
   - Class: rviz_common/Selection
@@ -278,13 +278,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Green: EKF Output (Odom Only)"
+      Name: "Blue: EKF Output (Odom Only)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 0; 255; 0
+        Color: 53; 132; 228
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -317,13 +317,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Blue: EKF Output (Odom + IMU)"
+      Name: "Green: EKF Output (Odom + IMU)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -392,7 +392,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 23.9053955078125
+      Scale: 127.04530334472656
       Target Frame: r2d2/base_link
       Value: TopDownOrtho (rviz_default_plugins)
       X: 0

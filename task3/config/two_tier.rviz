@@ -4,8 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Blue: EKF Output (Tier 1)1/Shape1"
-        - "/Yellow: EKF Output (Tier 2)1/Shape1"
+        - "/Green: EKF Output (Tier 2)1/Shape1"
         - /Map1/Topic1
       Splitter Ratio: 0.8801498413085938
     Tree Height: 1388
@@ -226,7 +225,7 @@ Visualization Manager:
       Axes Length: 1
       Axes Radius: 0.10000000149011612
       Class: rviz_default_plugins/PoseWithCovariance
-      Color: 51; 209; 122
+      Color: 53; 132; 228
       Covariance:
         Orientation:
           Alpha: 0.5
@@ -245,7 +244,7 @@ Visualization Manager:
       Enabled: true
       Head Length: 0.30000001192092896
       Head Radius: 0.10000000149011612
-      Name: "Green: Global Pose"
+      Name: "Blue: Global Pose"
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
       Shape: Arrow
@@ -276,13 +275,13 @@ Visualization Manager:
         Value: false
       Enabled: false
       Keep: 600
-      Name: "Blue: EKF Output (Tier 1)"
+      Name: "Yellow: EKF Output (Tier 1)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 246; 211; 45
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -315,13 +314,13 @@ Visualization Manager:
         Value: true
       Enabled: true
       Keep: 600
-      Name: "Yellow: EKF Output (Tier 2)"
+      Name: "Green: EKF Output (Tier 2)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 246; 211; 45
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
