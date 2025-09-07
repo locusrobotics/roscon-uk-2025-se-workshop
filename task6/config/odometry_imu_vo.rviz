@@ -4,9 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Blue: FLS Output (Odom + IMU)1/Shape1"
-        - "/Yellow: EKF Output (Odom + IMU + VO)1/Shape1"
-        - "/Magenta: FLS Output (Odom + IMU + VO)1/Shape1"
+        - "/Blue: FLS Output (Odom Only)1/Shape1"
+        - "/Green: FLS Output (Odom + IMU + VO)1/Shape1"
       Splitter Ratio: 0.8445945978164673
     Tree Height: 1388
   - Class: rviz_common/Selection
@@ -280,13 +279,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Green: FLS Output (Odom Only)"
+      Name: "Blue: FLS Output (Odom Only)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 0; 255; 0
+        Color: 53; 132; 228
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -319,13 +318,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Blue: FLS Output (Odom + IMU)"
+      Name: "Yellow: FLS Output (Odom + IMU)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 246; 211; 45
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -358,13 +357,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Yellow: EKF Output (Odom + IMU + VO)"
+      Name: "Magenta: EKF Output (Odom + IMU + VO)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 246; 211; 45
+        Color: 204; 51; 204
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -397,13 +396,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Magenta: FLS Output (Odom + IMU + VO)"
+      Name: "Green: FLS Output (Odom + IMU + VO)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 204; 51; 204
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1

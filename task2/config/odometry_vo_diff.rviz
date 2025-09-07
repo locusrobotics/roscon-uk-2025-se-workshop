@@ -4,8 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Blue: EKF Output (Odometry + VO)1/Shape1"
-        - "/Yelloq: EKF Output (Odometry + VO Diff)1/Shape1"
+        - "/Green: EKF Output (Odometry + VO Diff)1/Shape1"
       Splitter Ratio: 0.8580814599990845
     Tree Height: 1388
   - Class: rviz_common/Selection
@@ -25,7 +24,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -279,13 +278,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Green: EKF Output (Odometry Only)"
+      Name: "Blue: EKF Output (Odometry Only)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 0; 255; 0
+        Color: 53; 132; 228
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -318,13 +317,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Blue: EKF Output (Odometry + VO)"
+      Name: "Yellow: EKF Output (Odometry + VO)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 246; 211; 45
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -357,13 +356,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Yelloq: EKF Output (Odometry + VO Diff)"
+      Name: "Green: EKF Output (Odometry + VO Diff)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 248; 228; 92
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
