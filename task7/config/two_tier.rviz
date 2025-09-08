@@ -4,11 +4,11 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - "/Green: Global Pose1/Covariance1"
-        - "/Green: Global Pose1/Covariance1/Orientation1"
-        - "/Blue: FLS Output (Tier 1)1/Shape1"
-        - "/Yellow: EKF Output (Tier 2)1/Shape1"
-        - "/Magenta: FLS Output (Tier 2)1/Shape1"
+        - "/Blue: Global Pose1/Covariance1"
+        - "/Blue: Global Pose1/Covariance1/Orientation1"
+        - "/Magenta: EKF Output (Tier 2)1/Shape1"
+        - "/Green: FLS Output (Tier 2)1/Covariance1/Position1"
+        - "/Green: FLS Output (Tier 2)1/Covariance1/Orientation1"
         - /Map1/Topic1
       Splitter Ratio: 0.8213716149330139
     Tree Height: 1388
@@ -29,7 +29,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -229,11 +229,11 @@ Visualization Manager:
       Axes Length: 1
       Axes Radius: 0.10000000149011612
       Class: rviz_default_plugins/PoseWithCovariance
-      Color: 51; 209; 122
+      Color: 53; 132; 228
       Covariance:
         Orientation:
           Alpha: 0.5
-          Color: 38; 162; 105
+          Color: 153; 193; 241
           Color Style: Unique
           Frame: Local
           Offset: 1
@@ -248,7 +248,7 @@ Visualization Manager:
       Enabled: true
       Head Length: 0.30000001192092896
       Head Radius: 0.10000000149011612
-      Name: "Green: Global Pose"
+      Name: "Blue: Global Pose"
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
       Shape: Arrow
@@ -277,15 +277,15 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: false
-      Enabled: false
+      Enabled: true
       Keep: 600
-      Name: "Blue: FLS Output (Tier 1)"
+      Name: "Yellow: FLS Output (Tier 1)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 53; 132; 228
+        Color: 246; 211; 45
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -298,7 +298,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /r2d2/odometry/filtered_tier1_fls
-      Value: false
+      Value: true
     - Angle Tolerance: 0.7799999713897705
       Class: rviz_default_plugins/Odometry
       Covariance:
@@ -318,13 +318,13 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 600
-      Name: "Yellow: EKF Output (Tier 2)"
+      Name: "Magenta: EKF Output (Tier 2)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 246; 211; 45
+        Color: 204; 51; 204
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -343,7 +343,7 @@ Visualization Manager:
       Covariance:
         Orientation:
           Alpha: 0.5
-          Color: 255; 255; 127
+          Color: 38; 162; 105
           Color Style: Unique
           Frame: Local
           Offset: 1
@@ -351,19 +351,19 @@ Visualization Manager:
           Value: true
         Position:
           Alpha: 0.30000001192092896
-          Color: 204; 51; 204
+          Color: 143; 240; 164
           Scale: 1
           Value: true
         Value: true
       Enabled: true
       Keep: 600
-      Name: "Magenta: FLS Output (Tier 2)"
+      Name: "Green: FLS Output (Tier 2)"
       Position Tolerance: 1
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 145; 65; 172
+        Color: 0; 255; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1

@@ -40,6 +40,7 @@ r2d2:
                           false, false, false,
                           true,  false, false,
                           false, false, true]
+            imu0_remove_gravitational_acceleration: true
 
     ekf_node_tier2:
         ros__parameters:
@@ -82,6 +83,7 @@ r2d2:
                           false, false, false,
                           true,  false, false,
                           false, false, true]
+            imu0_remove_gravitational_acceleration: true
 
             pose0: pose_global
             pose0_config: [true,  true,  false,

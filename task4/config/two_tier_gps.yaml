@@ -33,6 +33,7 @@ r2d2:
                           false, false, false,
                           false, false, true,
                           true,  false, false]
+            imu0_remove_gravitational_acceleration: true
 
     ekf_node_tier2:
         ros__parameters:
@@ -75,6 +76,7 @@ r2d2:
                           false, false, false,
                           false, false, true,
                           true,  false, false]
+            imu0_remove_gravitational_acceleration: true
 
     navsat_transform_node:
         ros__parameters:

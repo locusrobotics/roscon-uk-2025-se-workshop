@@ -34,4 +34,4 @@ r2d2:
                           false, false, false,
                           true,  false, false,
                           false, false, true]
-
+            imu0_remove_gravitational_acceleration: true
