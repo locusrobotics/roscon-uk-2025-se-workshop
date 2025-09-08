@@ -22,10 +22,11 @@ r2d2:
                            false, false, true,    # roll velocity, pitch velocity, yaw velocity
                            false, false, false]   # x acceleration, y acceleration, z acceleration
 
-#---------> Fill these out
             imu0: ?
             imu0_config: [?, ?, ?,
                           ?, ?, ?,
                           ?, ?, ?,
                           ?, ?, ?,
                           ?, ?, ?]
+            imu0_remove_gravitational_acceleration: true
+
