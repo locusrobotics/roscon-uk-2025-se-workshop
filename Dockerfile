@@ -2,7 +2,7 @@ FROM ros:kilted
 
 RUN apt-get update && apt-get install -y wget xz-utils git git-lfs vim build-essential \
     ros-kilted-robot-localization ros-kilted-rviz2 ros-kilted-urdf ros-kilted-fuse ros-kilted-xacro \
-    emacs vim nano
+    emacs vim nano gedit
 RUN git lfs install
 
 WORKDIR /root/ws/src
