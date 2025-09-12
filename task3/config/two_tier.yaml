@@ -42,3 +42,4 @@ r2d2:
                           false, false, true]
             imu0_remove_gravitational_acceleration: true
 
+ #-> Add the second-tier EKF config here

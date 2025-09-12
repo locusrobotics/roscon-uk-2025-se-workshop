@@ -53,7 +53,7 @@ Why?
 
 ### Steps
 
-1. Edit the file `$task2/config/odometry_pnc.yaml`
+1. Edit the file `$task2/config/odometry_modified_pnc.yaml`
 1. Edit the `process_noise_covariance` for the wheel encoder odometry by increasing the values for `x` velocity, `y` velocity (not really necessary), and `yaw` velocity.
 1. Now run
 

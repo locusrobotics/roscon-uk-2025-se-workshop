@@ -16,8 +16,6 @@ r2d2:
             initial_state: [-465.90, -834.2617, 0.0, 0.0, 0.0, -1.584, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
             process_noise_covariance: [1e-6, 1e-6, 1e-6, 1e-6, 1e-6, 1e-6, 0.5, 0.5, 1e-6, 1e-6, 1e-6, 0.5, 1e-6, 1e-6, 1e-6]
 
-            # NOTE the odom0 and odom1 sources are now fusing pose data instead of velocities!
-
             odom0: odometry                       # Topic type + number (odomN, poseN, twistN, imuN) and name
             odom0_config: [false,  false,  false,   # x, y, z
                            false, false, false,    # roll, pitch, yaw
