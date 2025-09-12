@@ -4,6 +4,11 @@ RUN apt-get update && apt-get install -y wget xz-utils git git-lfs vim build-ess
     ros-kilted-robot-localization ros-kilted-rviz2 ros-kilted-urdf ros-kilted-fuse ros-kilted-xacro \
     emacs vim nano gedit
 RUN git lfs install
+RUN wget https://go.microsoft.com/fwlink/?LinkID=760868 -O code.deb
+RUN apt install ./code.deb -y
+RUN rm code.deb
+RUN mkdir /root/.code
+
 
 WORKDIR /root/ws/src
 RUN git clone https://github.com/locusrobotics/roscon-uk-2025-se-workshop.git
@@ -30,4 +35,5 @@ ENV bags=/root/ws/src/roscon-uk-2025-se-workshop/bags
 
 RUN echo "alias s='source /root/ws/install/setup.bash'" >> /root/.bashrc
 RUN echo "alias cb='cd /root/ws && colcon build --symlink-install && cd -'" >> /root/.bashrc
+RUN echo "alias vscode='code --no-sandbox --user-data-dir /root/.code -r /root/ws/src/roscon-uk-2025-se-workshop'" >> /root/.bashrc
 RUN echo "s" >> /root/.bashrc
